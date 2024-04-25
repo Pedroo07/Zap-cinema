@@ -8,9 +8,9 @@ type Props = {
 export const Navigation = () => {
     
     return (
-        <nav className='justify-between flex items-center p-14 max-w-full'>
-            <ul className='flex items-center gap-14'>
-                <li className='hover:underline text-zinc-100 cursor-default '><img src="/image0.png" alt="logo da zapcinema" /></li>
+        <nav className='justify-between flex items-center px-24 py-14 max-w-full'>
+            <ul className='flex items-center gap-24'>
+                <li className='hover:underline text-zinc-100 cursor-default '><img src="/image0.png" alt="logo da zapcinema" width={200}/></li>
                 <Li>Home</Li>
                 <Li>Filmes</Li>
                 <Li>Cinema</Li>
@@ -26,6 +26,6 @@ export const Navigation = () => {
 }
 const Li : React.FC<Props> = ({children}) => {
     return(
-        <li className='text-zinc-400 hover:underline hover:text-zinc-100 cursor-default'>{children}</li>
+        <li className='text-zinc-400 text-2xl hover:underline hover:text-zinc-100 cursor-default'>{children}</li>
     )
 }
