@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      zIndex:{
+        0 : -1
+      },
       fontFamily: {
         sans:['Neo Sans Pro', 'sans-serif']
       }
