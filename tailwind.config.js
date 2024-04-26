@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        sans:['Neo Sans Pro', 'sans-serif']
       }
     },
   },

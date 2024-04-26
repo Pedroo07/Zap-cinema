@@ -22,9 +22,14 @@ export const App = () => {
           <button className='flex w-44 h-12 items-center justify-center gap-2 bg-zinc-50 text-zinc-900 text-xl font-bold my-4 rounded-md shadow-md shadow-zinc-50/70'><CirclePlay /> VER TRAILER</button>
         </section>
         <section>
-          <img src="./Oppenheimer-fundo.png" alt="" className='opacity-80' />
+          <img src="/kung-fu-banner.png" alt="kung-fu-banner" />
+          <img src="/madame-banner.png" alt="madame-banner" />
+          <img src="/oppenheimer-banner.png" alt="oppenheimer-banner" />
         </section>
       </main>
+      <section>
+        <img src="./Oppeheimer-fundo.png" alt="" className='opacity-80' />
+      </section>
     </div>
   )
 }
