@@ -1,5 +1,4 @@
 import './App.css'
-import { CirclePlay } from "lucide-react"
 import { Navigation } from "./components/Navigation"
 import { Main } from './components/Main'
 
