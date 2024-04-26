@@ -2,6 +2,7 @@ import './App.css'
 import { Navigation } from "./components/Navigation"
 import { Main } from './components/Main'
 import { Label, Select, Option } from './components/Select'
+import { CalendarDays } from 'lucide-react'
 
 export const App = () => {
   return (
@@ -35,7 +36,7 @@ export const App = () => {
            <Option>21:00-Sala Comum</Option>
            </Select>
         </div>
-        <button>Reserve Já</button>
+        <button className='px-6 py-4 bg-slate-50 shadow-sm brightness-125 text-zinc-950  flex font-semibold  rounded-sm mt-7'><CalendarDays/> RESERVE JÁ</button>
       </section>
       <section>
         <img src="./Oppenheimer-fundo.png" alt="oppenheimer-fundo" className='opacity-80 z-0 absolute top-14 right-12' />
