@@ -41,8 +41,8 @@ export const Main: React.FC = () => {
     }
     return (
         <div>
-            <main className='flex justify-around'>
-                <section className='flex flex-col justify-center gap-2'>
+            <main className='flex flex-col-reverse items-center justify-around gap-4 lg:flex-row lg:gap-0'>
+                <section className='flex flex-col justify-center gap-2 items-center lg:items-start'>
                     <img src={images.find(image => image.isMain)?.src} alt={images.find(image => image.isMain)?.title} className='max-w-lg pb-16' />
                     <h1 className='text-3xl'>{images.find(image => image.isMain)?.title}</h1>
                     <h6 className='text-zinc-500 my-2'>IMDb Rating</h6>
@@ -52,8 +52,8 @@ export const Main: React.FC = () => {
                         <Li>Drama</Li>
                         <Li>Ação</Li>
                     </ul>
-                    <p className='text-zinc-600 text-lg' dangerouslySetInnerHTML={{ __html: images.find(image => image.isMain)?.description }} />
-                    <button className='flex w-44 h-12 items-center justify-center gap-2 bg-zinc-50 text-zinc-900 text-xl font-bold my-4 rounded-md shadow-md shadow-zinc-50/70'><CirclePlay /> VER TRAILER</button>
+                    <p className='text-zinc-600 text-lg' dangerouslySetInnerHTML={{ __html: images.find(image => image.isMain)?.description ?? '' }} />
+                    <button className='flex w-44 h-12 items-center justify-center gap-2 bg-zinc-50 text-zinc-900 text-xl font-bold my-4 rounded-md shadow-md shadow-zinc-50/70 '><CirclePlay /> VER TRAILER</button>
                 </section>
                 <section>
                     <img src={images.find(image => image.isMain)?.backImg} alt={images.find(image => image.isMain)?.title} className='opacity-80 z-0' />
