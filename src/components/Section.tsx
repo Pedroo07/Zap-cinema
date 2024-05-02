@@ -3,7 +3,7 @@ import { CalendarDays } from 'lucide-react'
 
 export const Section = () => {
     return (
-        <section className='bg-zinc-800 flex items-center w-full h-44 mt-10  justify-around '>
+        <section className='bg-zinc-800 flex items-center w-full h-44 mt-10  justify-around max-lg:flex-col max-lg:h-full'>
             <div className='flex flex-col gap-1'>
                 <Label>Escolha o Filme</Label>
                 <Select>

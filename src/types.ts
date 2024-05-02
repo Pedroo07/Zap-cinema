@@ -11,4 +11,5 @@ export type Image = {
     banner: string
     isMain: boolean
     rating: string
+    trailer: string
 }

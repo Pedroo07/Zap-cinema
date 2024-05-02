@@ -3,7 +3,9 @@ import React, { useState } from "react"
 import { Props, Image } from "../types"
 
 export const Main: React.FC = () => {
+    const [modal, setModal] = useState(false)
     const [images, setImages] = useState<Image[]>([
+
         {
             src: "/MadameWeb.png",
             title: "MADAME (2024)",
@@ -11,6 +13,7 @@ export const Main: React.FC = () => {
             backImg: "Madame-web-fundo.png",
             banner: "/madame-banner.png",
             rating: "rating-madame.png",
+            trailer: "https://www.youtube.com/embed/s_76M4c4LTo?si=CWJN83ddcceOoyUZ",
             isMain: false
         },
         {
@@ -20,6 +23,7 @@ export const Main: React.FC = () => {
             backImg: "Oppenheimer-fundo.png",
             banner: "/oppenheimer-banner.png",
             rating: "rating-oppenheimer.png",
+            trailer: "https://www.youtube.com/embed/F3OxA9Cz17A?si=IuzUs_2Jf7V58Jfb",
             isMain: true
         },
         {
@@ -29,6 +33,7 @@ export const Main: React.FC = () => {
             backImg: "Kung-Fu-fundo.png",
             banner: "/kung-fu-banner.png",
             rating: "rating-kung-fu.png",
+            trailer: "https://www.youtube.com/embed/hI1jyNTMBFI?si=R1HPfVf_RNAZZzWN",
             isMain: false
         }
     ])
@@ -38,6 +43,9 @@ export const Main: React.FC = () => {
         updatedImages[index].isMain = true
         mainImage.isMain = false
         setImages(updatedImages)
+    }
+    const handleModalvisibilty = () => {
+        setModal(!modal)
     }
     return (
         <div>
@@ -53,7 +61,7 @@ export const Main: React.FC = () => {
                         <Li>Ação</Li>
                     </ul>
                     <p className='text-zinc-600 text-lg' dangerouslySetInnerHTML={{ __html: images.find(image => image.isMain)?.description ?? '' }} />
-                    <button className='flex w-44 h-12 items-center justify-center gap-2 bg-zinc-50 text-zinc-900 text-xl font-bold my-4 rounded-md shadow-md shadow-zinc-50/70 '><CirclePlay /> VER TRAILER</button>
+                    <button className='flex w-44 h-12 items-center justify-center gap-2 bg-zinc-50 text-zinc-900 text-xl font-bold my-4 rounded-md shadow-md shadow-zinc-50/70 hover:scale-110' onClick={handleModalvisibilty}><CirclePlay /> VER TRAILER</button>
                 </section>
                 <section>
                     <img src={images.find(image => image.isMain)?.backImg} alt={images.find(image => image.isMain)?.title} className='opacity-80 z-0' />
@@ -64,6 +72,10 @@ export const Main: React.FC = () => {
                         ))}
                     </section>
                 </section>
+                <div className={`absolute z-30 ${modal ? "" : "hidden"}`}>
+                    <span className="font-semibold text-2xl bg-slate-950 text-slate-600 p-2 rounded cursor-pointer" onClick={handleModalvisibilty}>X</span>
+                    <iframe width="560" height="315" src={modal ? images.find(image => image.isMain)?.trailer : ""} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                </div>
             </main>
         </div>
     )

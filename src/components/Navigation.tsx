@@ -20,9 +20,9 @@ export const Navigation = () => {
                 <div className={`${menuBar ? 'opacity-0' : ''} w-10 h-1 rounded bg-slate-600  mx-auto transition-all duration-300`}></div>
                 <div className={`${menuBar ? '-translate-y-2 -rotate-45' : ''} w-10  h-1 rounded bg-slate-600 my-1 mx-auto transition-all duration-300`}></div>
             </div>
-        <nav className={`${menuBar ? 'fixed w-full h-full z-40 bg-black flex-col' : 'max-lg:hidden'} justify-between flex items-center px-24 py-14 max-w-full`}>
-            <ul className={`${menuBar ? 'flex-col' : ''} flex items-center gap-24  lg:flex-row`}>
-                <li className='hover:underline text-zinc-100 cursor-default '><img src="/image0.png" alt="logo da zapcinema" width={200}/></li>
+        <nav className={`${menuBar ? 'fixed w-full h-full z-40 bg-black flex-col' : 'max-lg:hidden'} justify-around flex items-center py-14 gap-4 w-full`}>
+            <ul className={`${menuBar ? 'flex-col' : ''} flex items-center xl:gap-24 max-xl:gap-14`}>
+                <img src="/image0.png" alt="logo da zapcinema"/>
                 <Li>Home</Li>
                 <Li>Filmes</Li>
                 <Li>Cinema</Li>
