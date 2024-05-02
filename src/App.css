@@ -6,4 +6,5 @@
 body{
   color: white;
   background-color: #121212;
+  max-height: 100vh;
 }

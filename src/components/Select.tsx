@@ -3,7 +3,7 @@ import { Props } from '../types'
 
 export const Select: React.FC<Props> = ({ children }) => {
     return (
-        <select name="movies" id="movies" className='text-zinc-400 bg-zinc-700 font-light py-4 rounded-sm px-6'> {children}</select>
+        <select name="movies" id="movies" className='text-zinc-400 bg-zinc-700 font-light py-4 rounded-sm px-6 cursor-pointer'> {children}</select>
     )
 }
 export const Option: React.FC<Props> = ({ children }) => {
