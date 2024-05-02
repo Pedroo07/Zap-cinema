@@ -10,4 +10,5 @@ export type Image = {
     backImg: string
     banner: string
     isMain: boolean
+    rating: string
 }
