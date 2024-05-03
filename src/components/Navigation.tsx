@@ -22,7 +22,7 @@ export const Navigation = () => {
             </div>
         <nav className={`${menuBar ? 'fixed w-full h-full z-40 bg-black flex-col' : 'max-lg:hidden'} justify-around flex items-center py-14 gap-4 w-full`}>
             <ul className={`${menuBar ? 'flex-col' : ''} flex items-center xl:gap-24 max-xl:gap-14`}>
-                <img src="/image0.png" alt="logo da zapcinema"/>
+                <img src="/Zap-cinema/image0.png" alt="logo da zapcinema"/>
                 <Li>Home</Li>
                 <Li>Filmes</Li>
                 <Li>Cinema</Li>
@@ -31,7 +31,7 @@ export const Navigation = () => {
             </ul>
             <div className='flex items-center gap-12'>
                 <Search className='size-6 text-zinc-400' />
-                <img src="/eu.jpg" alt="imagen do usuario" className='rounded-full' width={50} height={50} />
+                <img src="/Zap-cinema/eu.jpg" alt="imagen do usuario" className='rounded-full' width={50} height={50} />
             </div>
         </nav>
         </div>
