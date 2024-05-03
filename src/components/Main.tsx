@@ -51,10 +51,10 @@ export const Main: React.FC = () => {
         <div>
             <main className='flex flex-col-reverse items-center justify-around gap-4 lg:flex-row lg:gap-0'>
                 <section className='flex flex-col justify-center gap-2 items-center lg:items-start'>
-                    <img src={images.find(image => image.isMain)?.src} alt={images.find(image => image.isMain)?.title} className='max-w-lg pb-16' />
+                    <img src={'/Zap-cinema' + images.find(image => image.isMain)?.src} alt={images.find(image => image.isMain)?.title} className='max-w-lg pb-16' />
                     <h1 className='text-3xl'>{images.find(image => image.isMain)?.title}</h1>
                     <h6 className='text-zinc-500 my-2'>IMDb Rating</h6>
-                    <img src={images.find(image => image.isMain)?.rating} alt="rating" width={250} />
+                    <img src={ images.find(image => image.isMain)?.rating } alt="rating" width={250} />
                     <ul className='flex gap-2 p-2'>
                         <Li>História</Li>
                         <Li>Drama</Li>
@@ -67,7 +67,7 @@ export const Main: React.FC = () => {
                     <img src={images.find(image => image.isMain)?.backImg} alt={images.find(image => image.isMain)?.title} className='opacity-80 z-0' />
                     <section className='flex items-end justify-center'>
                         {images.map((image, index) => (
-                            <img key={index} src={image.banner} className={`${image.isMain ? 'w-1/4 opacity-100' : 'w-1/5 opacity-60'}`} onClick={() => { handleMainImg(index) }} />
+                            <img key={index} src={image.banner ? '/Zap-cinema' + image.banner : ""  } className={`${image.isMain ? 'w-1/4 opacity-100' : 'w-1/5 opacity-60'}`} onClick={() => { handleMainImg(index) }} />
 
                         ))}
                     </section>
